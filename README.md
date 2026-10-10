@@ -1,42 +1,131 @@
 # StyleGAN-Inspired CIFAR-10 Image Generation Using TensorFlow
 
-## Project Overview
+Exploring generative deep learning through image synthesis, training analysis, style mixing, and latent-space interpolation.
 
-This project implements a compact StyleGAN-inspired generative adversarial network using TensorFlow and Keras. The model learns to generate 32 × 32 RGB images using the CIFAR-10 dataset.
+## 📌 Project Overview
 
-## Key Features
+This project explores a StyleGAN-inspired approach to image generation using TensorFlow and the CIFAR-10 dataset. It investigates how generative models learn image representations and synthesize new images from latent vectors.
 
-- Mapping network that transforms latent vectors into style vectors.
-- Style-based image synthesis network.
-- Generator and discriminator networks.
-- Adversarial training using logistic GAN loss.
-- Style mixing and latent interpolation.
-- Visualization of generated images.
+The project includes image generation experiments, training-loss visualization, and style manipulation techniques to study the capabilities of generative models.
 
-## Technologies Used
+## ✨ Key Features
+
+- **Image Generation:** Generate synthetic images using a GAN-based model.
+- **Training Analysis:** Visualize generator and discriminator training losses.
+- **Style Mixing:** Explore combinations of visual features from different latent inputs.
+- **Latent Interpolation:** Investigate transitions between latent representations, if implemented in the notebook.
+- **Image Visualization:** Compare real dataset samples with generated outputs.
+
+## 🛠️ Technology Stack
 
 - Python
-- TensorFlow and Keras
+- TensorFlow
 - NumPy
 - Matplotlib
+- Jupyter Notebook
 - CIFAR-10 dataset
 
-## Project Structure
+## 🧠 Model Overview
 
-- `StyleGAN_CIFAR10_TensorFlow.ipynb` — model implementation, training, and visualization.
-- `outputs/` — generated image samples, when saved.
+Generative Adversarial Networks consist of two neural networks:
 
-## How to Run
+- **Generator:** Learns to produce synthetic images from latent inputs.
+- **Discriminator:** Learns to distinguish real training images from generated images.
 
-1. Install Python and the required libraries.
-2. Open the notebook in Jupyter Notebook or Google Colab.
-3. Run the cells in order.
-4. Train the model and view the generated images.
+The two networks are trained adversarially. This project explores StyleGAN-inspired concepts for controlling and generating image variations.
 
-## Dataset
+## 🗂️ Project Structure
 
-The project uses CIFAR-10, a dataset containing 32 × 32 color images across 10 classes.
+```text
+Style-GAN/
+├── README.md
+├── StyleGAN_CIFAR10_TensorFlow.ipynb
+├── requirements.txt
+├── real_cifar10.png
+├── style_mixing.png
+└── training_results.png
+```
 
-## Note
+## 📊 Experimental Results
 
-This is a StyleGAN-inspired implementation for educational and experimental purposes. It is not a full reproduction of the original StyleGAN architecture.
+### 1. Real CIFAR-10 Images
+
+Examples of images from the dataset used in the experiments.
+
+![Real CIFAR-10 Images](real_cifar10.png)
+
+### 2. Training Results
+
+Visualization of the training process and loss behavior.
+
+![Training Results](training_results.png)
+
+### 3. Style Mixing
+
+Visual results from the style-mixing experiment.
+
+![Style Mixing Results](style_mixing.png)
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/vish-21-prog/Style-GAN.git
+cd Style-GAN
+```
+
+### 2. Create a Virtual Environment (Optional)
+
+```bash
+python -m venv venv
+```
+
+Activate it on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Notebook
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Open `StyleGAN_CIFAR10_TensorFlow.ipynb` and run the cells in order.
+
+**Note:** Training time and results depend on the hardware, configuration, and training duration.
+
+## 🔬 Learning Outcomes
+
+- Understanding adversarial learning.
+- Exploring image generation with deep learning.
+- Analyzing generator and discriminator training behavior.
+- Investigating style mixing and latent-space representations.
+- Visualizing and documenting generative model experiments.
+
+## 🔮 Future Improvements
+
+- Improve image quality and training stability.
+- Evaluate generated images using appropriate quantitative metrics.
+- Experiment with larger image resolutions and datasets.
+- Explore additional latent-space manipulation techniques.
+
+## 👩‍💻 Author
+
+**Vishalini M.**
+
+GitHub: [vish-21-prog](https://github.com/vish-21-prog)
+
+---
+
+*This project is an educational exploration of StyleGAN-inspired image generation. Results depend on the implemented architecture and experimental configuration.*
